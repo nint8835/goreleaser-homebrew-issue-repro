@@ -33,3 +33,5 @@ Missing URL
 Error: Invalid cask (Linux on ARM64): /opt/homebrew/Library/Taps/test/homebrew-test/Casks/test.rb
 Missing Linux stanzas can leave Linux `sha256` as nil. Add `depends_on :macos` if this cask is macOS-only or `depends_on arch:` if it does not support this architecture.
 ```
+
+Once done, `brew untap test/test` to clean up the test tap.
