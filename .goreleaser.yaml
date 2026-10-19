@@ -1,0 +1,25 @@
+version: 2
+
+builds:
+  - main: ./...
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - arm64
+      - amd64
+    ignore:
+      - goos: linux
+        goarch: arm64
+      - goos: darwin
+        goarch: amd64
+
+archives:
+  - formats: [tar.gz]
+
+homebrew_casks:
+  - name: test
+    repository:
+      name: test
